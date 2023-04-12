@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article>
+  {% capture subtitle %}
+    {{ page.date | date_to_long_string: "ordinal", "US" }}
+  {% endcapture %}
+
+  {% include header.html
+    title=page.title
+    subtitle=subtitle
+    intro=page.intro
+    banner_image=page.banner_image
+  %}
+
+  {{ content }}
+</article>

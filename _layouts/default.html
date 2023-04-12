@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>
+      {% if page.title %}
+        {{ page.title | smartify }} -
+      {% endif %}
+      {{ site.title | smartify }}
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="{{ site.description | smartify }}" />
+    <meta name="og:image" content="{{ '/assets/images/beau.jpeg' | absolute_url }}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,800;1,7..72,400;1,7..72,800&family=Sansita:wght@400;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}" />
+  </head>
+
+  <body>
+    <a href="#main-content" className="skip-to-content">Skip to content</a>
+
+    <div data-typesettings="golden">
+      <nav>
+        <ul>
+          <li>
+            <h1>
+              <a href="/">{{ site.title | smartify }}</a>
+
+              {% if page.title %}
+                » <a href="#" aria-label="{{ page.title }}"> {{ page.title | strip | truncate: 25 }}</a>
+              {% endif %}
+            </h1>
+          </li>
+
+          <li>
+            <ul>
+              {% for page in site.navigation_pages %}
+                <li>
+                  <a href="/{{ page.url }}">{{ page.title | smartify }}</a>
+                </li>
+              {% endfor %}
+
+              <li>
+                <a href="/archive">Archive</a>
+              </li>
+
+              <li>
+                <a href="/about">About Beau</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <main id="main-content">
+        {{ content }}
+      </main>
+
+      <footer class="global-footer">&copy; Beau Hoover {{ 'now' | date: "%Y" }}</footer>
+    </div>
+  </body>
+</html>

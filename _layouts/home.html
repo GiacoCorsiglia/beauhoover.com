@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<article>
+  {% include header.html title=site.title subtitle=page.subtitle intro=page.intro %}
+
+  {{ content }}
+
+
+  {% for post in site.posts limit:site.recent_posts_on_homepage %}
+    <div class="recent-post">
+      <a href="{{ post.url }}">
+        <h3>
+          {{ post.title }}
+        </h3>
+      </a>
+
+      {{ post.preview | default: post.intro | default: post.excerpt | markdownify }}
+
+      <p><a href="{{ post.url }}">Continue reading »</a></p>
+    </div>
+
+    {% if forloop.last != true %}
+      <hr />
+    {% endif %}
+  {% endfor %}
+</article>

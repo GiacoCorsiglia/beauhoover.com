@@ -1,0 +1,19 @@
+<header
+  {% if include.banner_image %}
+    role="banner"
+    class="banner-image"
+    style="background-image: url('/assets/images/{{ include.banner_image }}');"
+  {% endif%}
+>
+  {% if include.title %}
+    <h1>{{ include.title | smartify }}</h1>
+  {% endif %}
+
+  {% if include.subtitle %}
+    <h2>{{ include.subtitle | smartify }}</h2>
+  {% endif %}
+
+  {% if include.intro %}
+    {{ include.intro | markdownify }}
+  {% endif %}
+</header>
