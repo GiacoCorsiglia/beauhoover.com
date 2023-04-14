@@ -7,7 +7,7 @@ layout: default
   {{ content }}
 
 
-  {% for post in site.posts limit:site.recent_posts_on_homepage %}
+  {% for post in site.posts limit:page.recent_posts %}
     <div class="recent-post">
       <a href="{{ post.url }}">
         <h3>

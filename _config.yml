@@ -27,9 +27,6 @@ url: "https://beauhoover.com" # the base hostname & protocol for your site, e.g.
 # twitter_username: jekyllrb
 github_username: greenbean1
 
-# Number of recent posts to show on the home page.
-recent_posts_on_homepage: 3
-
 # Comment this out to remove all navigation
 # Use this line instead if there re no pages:
 # navigation_pages: []
