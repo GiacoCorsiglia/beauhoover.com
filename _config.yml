@@ -27,14 +27,20 @@ url: "https://beauhoover.com" # the base hostname & protocol for your site, e.g.
 # twitter_username: jekyllrb
 github_username: greenbean1
 
-# Comment this out to remove all navigation
-# Use this line instead if there re no pages:
+# The list of links displayed on the top right in every page.
+# Use this line instead if there are no pages:
 # navigation_pages: []
 navigation_pages:
   - title: Example page
-    url: example-page
-
-
+    url: /example-page
+  - title: Archive
+    url: /archive
+  # The last element in this list will be highlighted.
+  - title: About Beau
+    url: /about
+  # You can link to external websites too if you want.
+  # - title: LinkedIn
+  #   url: https://www.linkedin.com/in/beauhoover/
 
 # The URL structure for blog posts.
 # https://jekyllrb.com/docs/permalinks/#global
