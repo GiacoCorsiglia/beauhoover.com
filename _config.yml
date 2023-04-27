@@ -30,8 +30,6 @@ github_username: greenbean1
 # Use this line instead if there are no pages:
 # navigation_pages: []
 navigation_pages:
-  - title: Example page
-    url: /example-page
   - title: Archive
     url: /archive
   # The last element in this list will be highlighted.
